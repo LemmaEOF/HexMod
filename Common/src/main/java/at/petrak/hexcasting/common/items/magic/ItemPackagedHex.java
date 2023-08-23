@@ -124,7 +124,7 @@ public abstract class ItemPackagedHex extends ItemMediaHolder implements HexHold
             return InteractionResultHolder.success(stack);
         }
 
-        if (AdventureHelper.canUseLoose(player, stack, world, player.position())) {
+        if (!AdventureHelper.canUseLoose(player, stack, world, player.position())) {
             return InteractionResultHolder.success(stack);
         }
 
